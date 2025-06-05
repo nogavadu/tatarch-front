@@ -13,6 +13,10 @@ import {
   NButton,
 } from "naive-ui";
 
+const props = defineProps({
+  placeId: Number,
+})
+
 const emit = defineEmits(["finishStep"]);
 
 const masters = ref([]);
@@ -33,7 +37,7 @@ const isError = ref(false);
 
 onMounted(async () => {
   try {
-    await masterAPI.getAll().then((res) => {
+    await masterAPI.getAll(props.placeId).then((res) => {
       masters.value = res.data;
     });
   } catch (error) {

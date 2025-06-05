@@ -94,6 +94,7 @@ const sendForm = async () => {
 
       <MasterStep
         v-if="currentStep == steps.master.step"
+        :place-id="formValue.placeId"
         v-model:master="formValue.masterId"
         @finish-step="nextStep"
       ></MasterStep>
