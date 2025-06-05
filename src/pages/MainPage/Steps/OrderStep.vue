@@ -100,7 +100,6 @@ const isDateDisabled = (timestamp) => {
           :is-date-disabled="isDateDisabled"
           @update:value="handleUpdateValue"
         >
-          {{ year }}-{{ month }}-{{ date }}
         </NCalendar>
 
         <NDivider></NDivider>
